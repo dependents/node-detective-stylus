@@ -5,10 +5,10 @@
 `npm install detective-stylus`
 
 It's the Stylus counterpart to
-[detective](https://github.com/substack/node-detective),
-[detective-amd](https://github.com/mrjoelkemp/node-detective-amd),
-[detective-es6](https://github.com/mrjoelkemp/node-detective-es6),
-and [detective-sass](https://github.com/mrjoelkemp/node-detective-sass)
+[detective](https://github.com/browserify/detective),
+[detective-amd](https://github.com/dependents/node-detective-amd),
+[detective-es6](https://github.com/dependents/node-detective-es6),
+and [detective-sass](https://github.com/dependents/node-detective-sass)
 
 Note: this detective uses a regex to find the `@import` or `@require` statements.
 
