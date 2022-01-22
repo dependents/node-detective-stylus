@@ -1,25 +1,27 @@
-### detective-stylus [![npm](http://img.shields.io/npm/v/detective-stylus.svg)](https://npmjs.org/package/detective-stylus) [![npm](http://img.shields.io/npm/dm/detective-stylus.svg)](https://npmjs.org/package/detective-stylus)
+### detective-stylus [![CI](https://github.com/dependents/detective-stylus/actions/workflows/ci.yml/badge.svg)](https://github.com/dependents/detective-stylus/actions/workflows/ci.yml) [![npm](https://img.shields.io/npm/v/detective-stylus)](https://www.npmjs.com/package/detective-stylus) [![npm](http://img.shields.io/npm/dm/detective-stylus)](https://www.npmjs.com/package/detective-stylus)
 
 > Find the dependencies of a Stylus file
 
-`npm install detective-stylus`
+```sh
+npm install detective-stylus
+```
 
 It's the Stylus counterpart to
 [detective](https://github.com/substack/node-detective),
-[detective-amd](https://github.com/mrjoelkemp/node-detective-amd),
-[detective-es6](https://github.com/mrjoelkemp/node-detective-es6),
-and [detective-sass](https://github.com/mrjoelkemp/node-detective-sass)
+[detective-amd](https://github.com/dependents/node-detective-amd),
+[detective-es6](https://github.com/dependents/node-detective-es6),
+and [detective-sass](https://github.com/dependents/node-detective-sass)
 
 Note: this detective uses a regex to find the `@import` or `@require` statements.
 
 ### Usage
 
 ```js
-var detective = require('detective-stylus');
+const detective = require('detective-stylus');
 
-var content = fs.readFileSync('styles.styl', 'utf8');
+const content = fs.readFileSync('styles.styl', 'utf8');
 
 // list of imported file names (ex: '_foo.styl', '_foo', etc)
-var dependencies = detective(content);
+const dependencies = detective(content);
 ```
 
