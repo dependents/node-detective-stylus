@@ -3,15 +3,17 @@
   "version": "1.0.0",
   "description": "Get the dependencies of a Stylus file",
   "main": "index.js",
-  "directories": {
-    "test": "test"
-  },
+  "files": [
+    "index.js"
+  ],
   "scripts": {
-    "test": "mocha"
+    "lint": "eslint index.js \"test/*.js\"",
+    "mocha": "mocha",
+    "test": "npm run lint && npm run mocha"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mrjoelkemp/node-detective-stylus.git"
+    "url": "git+https://github.com/dependents/node-detective-stylus.git"
   },
   "keywords": [
     "stylus",
@@ -20,10 +22,17 @@
     "analysis",
     "dependencies"
   ],
-  "author": "Joel Kemp <joel@mrjoelkemp.com> (http://www.mrjoelkemp.com/)",
+  "author": "Joel Kemp <joel@mrjoelkemp.com> (https://mrjoelkemp.com/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mrjoelkemp/node-detective-stylus/issues"
+    "url": "https://github.com/dependents/node-detective-stylus/issues"
   },
-  "homepage": "https://github.com/mrjoelkemp/node-detective-stylus"
+  "homepage": "https://github.com/dependents/node-detective-stylus",
+  "engines": {
+    "node": ">=6.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "mocha": "^6.2.3"
+  }
 }

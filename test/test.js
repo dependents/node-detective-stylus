@@ -1,13 +1,17 @@
-var detective = require('../');
-var assert = require('assert');
+/* eslint-env mocha */
 
-describe('detective-stylus', function() {
-  function hasDependencies(source, expected) {
-    var deps = detective(source);
-    assert.deepEqual(deps, expected);
-  }
+'use strict';
 
-  it('returns the dependencies of Stylus @import statements', function() {
+const assert = require('assert');
+const detective = require('../index.js');
+
+function hasDependencies(source, expected) {
+  const dependencies = detective(source);
+  assert.deepEqual(dependencies, expected);
+}
+
+describe('detective-stylus', () => {
+  it('returns the dependencies of Stylus @import statements', () => {
     hasDependencies('@import "_foo.styl"', ['_foo.styl']);
     hasDependencies('@import "_foo"', ['_foo']);
     hasDependencies('body { color: blue } @import "_foo"', ['_foo']);
@@ -16,13 +20,13 @@ describe('detective-stylus', function() {
     hasDependencies('@import "_foo.styl"\n@import "_bar.styl"\n@import "_baz"\n@import "_buttons"', ['_foo.styl', '_bar.styl', '_baz', '_buttons']);
   });
 
-  it('returns the dependencies of Stylus @require statements', function() {
+  it('returns the dependencies of Stylus @require statements', () => {
     hasDependencies('@require \'bar\';', ['bar']);
     hasDependencies('@require \'bar.styl\';', ['bar.styl']);
   });
 
-  it('does not throw for empty files', function() {
-    assert.doesNotThrow(function() {
+  it('does not throw for empty files', () => {
+    assert.doesNotThrow(() => {
       detective('');
     });
   });
