@@ -1,6 +1,6 @@
 {
   "name": "detective-stylus",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Get the dependencies of a Stylus file",
   "main": "index.js",
   "files": [
