@@ -11,6 +11,24 @@ function hasDependencies(source, expected) {
 }
 
 describe('detective-stylus', () => {
+  it('does not throw for empty files', () => {
+    assert.doesNotThrow(() => {
+      detective('');
+    });
+  });
+
+  it('throws if the given content is not a string', () => {
+    assert.throws(() => {
+      detective(() => {});
+    }, Error, 'content is not a string');
+  });
+
+  it('throws if called with no arguments', () => {
+    assert.throws(() => {
+      detective();
+    }, Error, 'src not given');
+  });
+
   it('returns the dependencies of Stylus @import statements', () => {
     hasDependencies('@import "_foo.styl"', ['_foo.styl']);
     hasDependencies('@import "_foo"', ['_foo']);
@@ -23,11 +41,5 @@ describe('detective-stylus', () => {
   it('returns the dependencies of Stylus @require statements', () => {
     hasDependencies('@require \'bar\';', ['bar']);
     hasDependencies('@require \'bar.styl\';', ['bar.styl']);
-  });
-
-  it('does not throw for empty files', () => {
-    assert.doesNotThrow(() => {
-      detective('');
-    });
   });
 });
