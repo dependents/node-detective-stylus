@@ -10,7 +10,7 @@ It's the Stylus counterpart to
 [detective](https://github.com/substack/node-detective),
 [detective-amd](https://github.com/dependents/node-detective-amd),
 [detective-es6](https://github.com/dependents/node-detective-es6),
-and [detective-sass](https://github.com/dependents/node-detective-sass)
+and [detective-sass](https://github.com/dependents/node-detective-sass).
 
 Note: this detective uses a regex to find the `@import` or `@require` statements.
 
@@ -24,4 +24,3 @@ const content = fs.readFileSync('styles.styl', 'utf8');
 // list of imported file names (ex: '_foo.styl', '_foo', etc)
 const dependencies = detective(content);
 ```
-
