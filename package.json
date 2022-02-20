@@ -28,9 +28,6 @@
     "url": "https://github.com/dependents/node-detective-stylus/issues"
   },
   "homepage": "https://github.com/dependents/node-detective-stylus",
-  "engines": {
-    "node": ">=6.0"
-  },
   "devDependencies": {
     "eslint": "^5.16.0",
     "mocha": "^6.2.3"
