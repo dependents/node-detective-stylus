@@ -1,4 +1,4 @@
-### detective-stylus [![CI](https://github.com/dependents/node-detective-stylus/actions/workflows/ci.yml/badge.svg)](https://github.com/dependents/node-detective-stylus/actions/workflows/ci.yml) [![npm](https://img.shields.io/npm/v/detective-stylus)](https://www.npmjs.com/package/detective-stylus) [![npm](http://img.shields.io/npm/dm/detective-stylus)](https://www.npmjs.com/package/detective-stylus)
+### detective-stylus [![CI](https://img.shields.io/github/workflow/status/dependents/node-detective-stylus/CI/main?label=CI&logo=github)](https://github.com/dependents/node-detective-stylus/actions/workflows/ci.yml?query=branch%3Amain) [![npm](https://img.shields.io/npm/v/detective-stylus)](https://www.npmjs.com/package/detective-stylus) [![npm](https://img.shields.io/npm/dm/detective-stylus)](https://www.npmjs.com/package/detective-stylus)
 
 > Find the dependencies of a Stylus file
 
@@ -17,6 +17,7 @@ Note: this detective uses a regex to find the `@import` or `@require` statements
 ### Usage
 
 ```js
+const fs = require('fs');
 const detective = require('detective-stylus');
 
 const content = fs.readFileSync('styles.styl', 'utf8');
@@ -24,3 +25,7 @@ const content = fs.readFileSync('styles.styl', 'utf8');
 // list of imported file names (ex: '_foo.styl', '_foo', etc)
 const dependencies = detective(content);
 ```
+
+### License
+
+MIT
