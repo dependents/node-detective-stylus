@@ -1,4 +1,4 @@
-### detective-stylus [![CI](https://img.shields.io/github/workflow/status/dependents/node-detective-stylus/CI/main?label=CI&logo=github)](https://github.com/dependents/node-detective-stylus/actions/workflows/ci.yml?query=branch%3Amain) [![npm](https://img.shields.io/npm/v/detective-stylus)](https://www.npmjs.com/package/detective-stylus) [![npm](https://img.shields.io/npm/dm/detective-stylus)](https://www.npmjs.com/package/detective-stylus)
+### detective-stylus [![CI](https://img.shields.io/github/actions/workflow/status/dependents/node-detective-stylus/ci.yml?branch=main&label=CI&logo=github)](https://github.com/dependents/node-detective-stylus/actions/workflows/ci.yml?query=branch%3Amain) [![npm](https://img.shields.io/npm/v/detective-stylus)](https://www.npmjs.com/package/detective-stylus) [![npm](https://img.shields.io/npm/dm/detective-stylus)](https://www.npmjs.com/package/detective-stylus)
 
 > Find the dependencies of a Stylus file
 
