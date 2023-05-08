@@ -20,13 +20,13 @@ describe('detective-stylus', () => {
   it('throws if the given content is not a string', () => {
     assert.throws(() => {
       detective(() => {});
-    }, Error, 'content is not a string');
+    }, /^Error: content is not a string$/);
   });
 
   it('throws if called with no arguments', () => {
     assert.throws(() => {
       detective();
-    }, Error, 'src not given');
+    }, /^Error: content not given$/);
   });
 
   it('returns the dependencies of Stylus @import statements', () => {
