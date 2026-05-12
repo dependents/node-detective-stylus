@@ -1,12 +1,10 @@
-'use strict';
-
 /**
  * Extract the @import/@require statements from a given stylus file's content
  *
  * @param  {String} content
  * @return {String[]}
  */
-module.exports = function(content) {
+export default function detective(content) {
   if (content === undefined) throw new Error('content not given');
   if (typeof content !== 'string') throw new Error('content is not a string');
 
@@ -23,4 +21,4 @@ module.exports = function(content) {
   } while (matches);
 
   return dependencies;
-};
+}

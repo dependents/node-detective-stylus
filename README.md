@@ -20,14 +20,22 @@ Note: this detective uses a regex to find the `@import` or `@require` statements
 
 ## Usage
 
+### ESM
+
 ```js
-const fs = require('fs');
-const detective = require('detective-stylus');
+import fs from 'node:fs';
+import detective from 'detective-stylus';
 
 const content = fs.readFileSync('styles.styl', 'utf8');
 
 // list of imported file names (ex: '_foo.styl', '_foo', etc)
 const dependencies = detective(content);
+```
+
+### CommonJS
+
+```js
+const { default: detective } = require('detective-stylus');
 ```
 
 ## License
