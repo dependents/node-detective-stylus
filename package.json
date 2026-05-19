@@ -1,6 +1,6 @@
 {
   "name": "detective-stylus",
-  "version": "5.0.1",
+  "version": "6.0.0",
   "description": "Get the dependencies of a Stylus file",
   "type": "module",
   "exports": {
