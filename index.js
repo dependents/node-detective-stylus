@@ -7,6 +7,7 @@
 export default function detective(content) {
   if (content === undefined) throw new Error('content not given');
   if (typeof content !== 'string') throw new Error('content is not a string');
+  if (content === '') return [];
 
   const importRegex = /@(?:import|require)\s['"](.*)['"](?:\.styl)?/g;
   const dependencies = [];
